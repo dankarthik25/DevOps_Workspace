@@ -1,0 +1,15 @@
+cd /opt/softwares/
+
+
+# Get url of new version maven for  website
+wget https://www-us.apache.org/dist/maven/maven-3/3.6.0/binaries/apache-maven-3.6.0-bin.tar.gz
+
+vi ~/.bash_profile
+#insert 
+export M2_HOME=/opt/softwares/apache-maven-3.6.0
+export PATH=$PATH:/opt/softwares/apache-maven-3.6.0/bin
+
+# run bash_profile
+source ~/.profile
+
+mvn -version
